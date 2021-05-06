@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tpirates.store.dao.StoreDao">
+
+	<insert id="save">
+		INSERT INTO store (name, owner, address, phone, level, description)
+        VALUES ( #{saveDto.name}, #{saveDto.owner}, #{saveDto.address}, #{saveDto.phone}, #{saveDto.level}, #{saveDto.description} );
+	</insert>
+
+</mapper>
