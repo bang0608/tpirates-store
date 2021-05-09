@@ -1,6 +1,7 @@
 package com.tpirates.store.dto;
 
-import org.json.simple.JSONArray;
+import java.util.List;
+import java.util.Map;
 
 import lombok.Data;
 
@@ -12,5 +13,5 @@ public class StoreSearchResponseDto {
 	private String phone;
 	private Integer level;
 	private String description;
-	private JSONArray jsonArray;
+	private List<Map<String, String>> businessTimes;
 }
