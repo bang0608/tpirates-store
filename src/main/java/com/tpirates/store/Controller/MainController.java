@@ -1,4 +1,4 @@
-package com.tpirates.store.Controller;
+package com.tpirates.store.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

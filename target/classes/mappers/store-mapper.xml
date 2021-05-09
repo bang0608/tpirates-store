@@ -3,9 +3,13 @@
 
 <mapper namespace="com.tpirates.store.dao.StoreDao">
 
-	<insert id="save">
+	<insert id="save" useGeneratedKeys="true" keyColumn="id">
 		INSERT INTO store (name, owner, address, phone, level, description)
-        VALUES ( #{saveDto.name}, #{saveDto.owner}, #{saveDto.address}, #{saveDto.phone}, #{saveDto.level}, #{saveDto.description} );
+        VALUES ( #{name}, #{owner}, #{address}, #{phone}, #{level}, #{description} );
 	</insert>
+	
+	<select id="select" resultType="com.tpirates.store.dto.StoreSearchResponseDto">
+		SELECT * FROM store;
+	</select>
 
 </mapper>
