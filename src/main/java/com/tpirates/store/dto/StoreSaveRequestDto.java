@@ -1,12 +1,13 @@
 package com.tpirates.store.dto;
 
-import org.json.simple.JSONArray;
+import java.util.List;
+import java.util.Map;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
-@NoArgsConstructor
+@Data
 public class StoreSaveRequestDto {
 	private String name;
 	private String owner;
@@ -14,5 +15,5 @@ public class StoreSaveRequestDto {
 	private String phone;
 	private int level;
 	private String description;
-	private JSONArray businessTimes;
+	private List<Map<String, String>> businessTimes;
 }

@@ -1,17 +1,17 @@
 package com.tpirates.store.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.tpirates.store.dto.HolidaySaveRequestDto;
 import com.tpirates.store.dto.StoreSaveRequestDto;
 import com.tpirates.store.dto.StoreSearchResponseDto;
 
 @Mapper
-public interface StoreDao {
+public interface HolidayDao {
 	
-	Long save(StoreSaveRequestDto saveDto);
+	void save(Long id, Date holiday);
 	
-	List<StoreSearchResponseDto> select();
-
 }

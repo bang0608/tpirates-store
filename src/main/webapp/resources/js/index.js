@@ -21,21 +21,25 @@ var main = {
             phone: $('#phone').val(),
             description: $('#description').val(),
             level: $('#level option:selected').val()
-
         };
-
+                
+        data = JSON.stringify(data);
+        console.log(data);
+        
         $.ajax({
             type: 'POST',
             url: '/api/v1/stores',
-            dataType: 'json',
-            contentType:'application/json; charset=utf-8',
-            data: JSON.stringify(data)
+            data : data,
+	        processData: false,
+	        dataType: 'json',
+	        contentType: 'application/json',
         }).done(function() {
             alert('글이 등록되었습니다.');
             window.location.href = '/';
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
+        
     },
     update : function () {
         var data = {

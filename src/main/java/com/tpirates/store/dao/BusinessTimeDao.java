@@ -9,6 +9,6 @@ import java.util.*;
 @Mapper
 public interface BusinessTimeDao {
 	
-	void save(List<BusinessTimeSaveRequestDto> saveDtoList);
+	void saveAll(List<BusinessTimeSaveRequestDto> list);
 
 }
